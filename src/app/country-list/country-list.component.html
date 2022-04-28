@@ -1,0 +1,19 @@
+<h2>Countries</h2>
+
+<div *ngFor="let country of countries">
+
+  <h3>
+    <a [title]="country.name + ' details'">
+      {{ country.name }}
+    </a>
+  </h3>
+
+  <p *ngIf="country.description">
+    Description: {{ country.description }}
+  </p>
+
+  <button type="button" (click)="share()">
+    View
+  </button>
+
+</div>
